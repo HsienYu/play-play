@@ -211,7 +211,9 @@ def generate_text(model, start_string):
         # along with the previous hidden state
         input_eval = tf.expand_dims([predicted_id])
         text_generated.append(idx2char[predicted_id])
+
     return (start_string + ''.join(text_generated))
 
-    inp = input("Type a starting word: ")
-    print(generate_text(model, inp))
+
+inp = input("Type a starting word: ")
+print(generate_text(model, inp))
